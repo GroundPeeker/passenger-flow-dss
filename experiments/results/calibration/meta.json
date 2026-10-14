@@ -1,0 +1,207 @@
+{
+  "config": {
+    "scenario": "configs/scenario_stadium.yaml",
+    "metrics": "configs/metrics.yaml",
+    "duration": 9000.0,
+    "calibration_seeds": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037,
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045,
+      2046,
+      2047,
+      2048,
+      2049
+    ],
+    "validation_seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020,
+      3021,
+      3022,
+      3023,
+      3024,
+      3025,
+      3026,
+      3027,
+      3028,
+      3029,
+      3030,
+      3031,
+      3032,
+      3033,
+      3034,
+      3035,
+      3036,
+      3037,
+      3038,
+      3039,
+      3040,
+      3041,
+      3042,
+      3043,
+      3044,
+      3045,
+      3046,
+      3047,
+      3048,
+      3049
+    ],
+    "factors": [
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0,
+      1.01,
+      1.02
+    ],
+    "regimes": [
+      {
+        "name": "no_control"
+      },
+      {
+        "name": "switch_f0.3",
+        "sign": "JN",
+        "option": "to_B",
+        "fraction": 0.3,
+        "compliance": 1.0
+      }
+    ],
+    "validation_extra": [
+      {
+        "name": "least_loaded_c1",
+        "compliance": 1.0
+      }
+    ],
+    "output": "configs/calibration_stadium.yaml"
+  },
+  "chosen": {
+    "A": 0.96,
+    "B": 0.9,
+    "C": 0.98
+  },
+  "ratio_to_truth": {
+    "least_loaded_c1": {
+      "model_uncalibrated": {
+        "danger_exposure_ped_min": 0.8319428894472598,
+        "mean_time_min": 0.9607931938318397,
+        "clearance_time_min": 0.9803969359452849,
+        "congestion_exposure_ped_min": 0.8726406683165143
+      },
+      "model_calibrated": {
+        "danger_exposure_ped_min": 1.025501293970649,
+        "mean_time_min": 1.0222991266937727,
+        "clearance_time_min": 1.0657832144704456,
+        "congestion_exposure_ped_min": 1.0209142325045073
+      }
+    },
+    "no_control": {
+      "model_uncalibrated": {
+        "danger_exposure_ped_min": 0.8273560095124195,
+        "mean_time_min": 0.9655622885722203,
+        "clearance_time_min": 0.9865268276798507,
+        "congestion_exposure_ped_min": 0.8664907680496722
+      },
+      "model_calibrated": {
+        "danger_exposure_ped_min": 0.9435260757510505,
+        "mean_time_min": 1.00413132863961,
+        "clearance_time_min": 1.0226687791169162,
+        "congestion_exposure_ped_min": 0.957032799550308
+      }
+    },
+    "switch_f0.3": {
+      "model_uncalibrated": {
+        "danger_exposure_ped_min": 0.7409218270210738,
+        "mean_time_min": 0.955314993237079,
+        "clearance_time_min": 0.9778598903051314,
+        "congestion_exposure_ped_min": 0.8481326897237003
+      },
+      "model_calibrated": {
+        "danger_exposure_ped_min": 1.006739370322148,
+        "mean_time_min": 1.0109267626689569,
+        "clearance_time_min": 1.0475165541013738,
+        "congestion_exposure_ped_min": 1.0419527083389104
+      }
+    }
+  },
+  "git": "8070777",
+  "created": "2026-10-13T21:12:14",
+  "elapsed_s": 139.5
+}

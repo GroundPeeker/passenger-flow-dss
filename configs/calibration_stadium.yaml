@@ -1,0 +1,31 @@
+# Калибровка модели планирования (fidelity: model) сценария «стадион».
+# Создан experiments/calibrate_model.py (configs/experiment_calibration.yaml) —
+# вручную не править. Процедура и результат — docs/DECISIONS.md, этап 4 (доработка).
+#
+# κ — множитель эффективной пропускной способности вывоза в модели с непрерывным
+# оттоком (вместимость / интервал · κ): подобран по очередям перед входами станций
+# «реальности» (дискретные поезда) на seed 2000–2049, режимы: no_control, switch_f0.3.
+vehicle_throughput_factor:
+  A: 0.96
+  B: 0.90
+  C: 0.98
+# Проверка на seed 3000–3049: отношение средних метрик
+# модели к «реальности» (без калибровки → с калибровкой).
+validation_ratio_to_truth:
+  least_loaded_c1:
+    danger_exposure_ped_min: {uncalibrated: 0.832, calibrated: 1.026}
+    mean_time_min: {uncalibrated: 0.961, calibrated: 1.022}
+    clearance_time_min: {uncalibrated: 0.980, calibrated: 1.066}
+    congestion_exposure_ped_min: {uncalibrated: 0.873, calibrated: 1.021}
+  no_control:
+    danger_exposure_ped_min: {uncalibrated: 0.827, calibrated: 0.944}
+    mean_time_min: {uncalibrated: 0.966, calibrated: 1.004}
+    clearance_time_min: {uncalibrated: 0.987, calibrated: 1.023}
+    congestion_exposure_ped_min: {uncalibrated: 0.866, calibrated: 0.957}
+  switch_f0.3:
+    danger_exposure_ped_min: {uncalibrated: 0.741, calibrated: 1.007}
+    mean_time_min: {uncalibrated: 0.955, calibrated: 1.011}
+    clearance_time_min: {uncalibrated: 0.978, calibrated: 1.048}
+    congestion_exposure_ped_min: {uncalibrated: 0.848, calibrated: 1.042}
+created: '2026-10-13T21:12:14'
+git: '8070777'

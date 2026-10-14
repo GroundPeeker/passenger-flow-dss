@@ -1,0 +1,31 @@
+[project]
+name = "passenger-flow-dss"
+version = "0.1.0"
+description = "СППР для управления пассажиропотоком при крупномасштабных массовых мероприятиях (магистерская диссертация)"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "pandas>=2.1",
+    "matplotlib>=3.8",
+    "networkx>=3.2",
+    "osmnx>=1.9",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+# Чистый research-репозиторий без установки как пакета (нет build-backend,
+# импорт модулей из корня репозитория): uv только управляет окружением/зависимостями.
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+# Бесконечный накопитель стока допустим только в тестах, где он явно ожидается
+# (pytest.warns); в остальных случаях предупреждение — ошибка.
+filterwarnings = ["error::sim.network.InfiniteBufferWarning"]

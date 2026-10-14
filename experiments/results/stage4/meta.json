@@ -1,0 +1,261 @@
+{
+  "experiment": "stage4_compliance",
+  "config": {
+    "scenario": "configs/scenario_stadium.yaml",
+    "metrics": "configs/metrics.yaml",
+    "duration": 9000.0,
+    "evaluation": {
+      "fidelity": "truth",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "compliance": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "attendance": [
+        25000.0,
+        30000.0,
+        35000.0,
+        40000.0
+      ]
+    },
+    "planning": {
+      "fidelity": "model",
+      "calibrated": false,
+      "seeds": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009
+      ],
+      "fractions": [
+        0.0,
+        0.025,
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.225,
+        0.25,
+        0.275,
+        0.3,
+        0.325,
+        0.35,
+        0.375,
+        0.4,
+        0.425,
+        0.45,
+        0.475,
+        0.5,
+        0.525,
+        0.55,
+        0.575,
+        0.6
+      ],
+      "tolerance": 0.05,
+      "design_compliance_switch": [
+        1.0,
+        0.5
+      ],
+      "design_compliance_route": [
+        1.0
+      ]
+    },
+    "levers": {
+      "switch": {
+        "sign": "JN",
+        "option": "to_B",
+        "from_station": "A",
+        "to_station": "B",
+        "queues": {
+          "A": {
+            "plaza": "e_sq",
+            "approach": [
+              "e_av",
+              "e_pj"
+            ]
+          },
+          "B": {
+            "plaza": "e_mb",
+            "approach": [
+              "e_pb"
+            ]
+          }
+        },
+        "full_fraction": 0.95
+      },
+      "route": {
+        "sign": "JN",
+        "option": "park",
+        "routes": {
+          "avenue": [
+            "e_av"
+          ],
+          "park": [
+            "e_pk",
+            "e_pj"
+          ]
+        }
+      }
+    },
+    "least_loaded_every": 1,
+    "seat_variants": {
+      "base": 20,
+      "stations": [
+        "A",
+        "B"
+      ],
+      "capacity_ped": {
+        "15": 389.0,
+        "20": 519.0,
+        "25": 649.0,
+        "30": 779.0
+      }
+    },
+    "exposure_thresholds_street": [
+      3.5,
+      4.0
+    ]
+  },
+  "config_hash": "3cb70e0840b102eb",
+  "plan": {
+    "switch|15|1": {
+      "lever": "switch",
+      "seats_pct": 15,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 4200.157911593261,
+      "mean_time_min": 25.486846143694848
+    },
+    "switch|15|0.5": {
+      "lever": "switch",
+      "seats_pct": 15,
+      "design_c": 0.5,
+      "fraction": 0.175,
+      "danger_exposure_ped_min": 4398.648048253982,
+      "mean_time_min": 25.713338061800705
+    },
+    "switch|20|1": {
+      "lever": "switch",
+      "seats_pct": 20,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 2603.6520187063934,
+      "mean_time_min": 20.510919020064307
+    },
+    "switch|20|0.5": {
+      "lever": "switch",
+      "seats_pct": 20,
+      "design_c": 0.5,
+      "fraction": 0.15,
+      "danger_exposure_ped_min": 2623.988008645111,
+      "mean_time_min": 20.833964250201355
+    },
+    "switch|25|1": {
+      "lever": "switch",
+      "seats_pct": 25,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 2603.6520187063934,
+      "mean_time_min": 17.632855086453667
+    },
+    "switch|25|0.5": {
+      "lever": "switch",
+      "seats_pct": 25,
+      "design_c": 0.5,
+      "fraction": 0.15,
+      "danger_exposure_ped_min": 2617.0204641591417,
+      "mean_time_min": 17.880528268070414
+    },
+    "switch|30|1": {
+      "lever": "switch",
+      "seats_pct": 30,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 2603.3698526573753,
+      "mean_time_min": 15.799811901148018
+    },
+    "switch|30|0.5": {
+      "lever": "switch",
+      "seats_pct": 30,
+      "design_c": 0.5,
+      "fraction": 0.15,
+      "danger_exposure_ped_min": 2617.031182566964,
+      "mean_time_min": 16.01224080399246
+    },
+    "route|20|1": {
+      "lever": "route",
+      "seats_pct": 20,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 3390.1350590624766,
+      "mean_time_min": 21.96321541185402
+    }
+  },
+  "base_rho_crit_street": 4.0,
+  "git": "04e2ca7",
+  "created": "2026-10-13T21:27:48",
+  "elapsed_s": 509.7
+}

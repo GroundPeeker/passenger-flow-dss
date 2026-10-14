@@ -1,0 +1,13 @@
+# Этап 4: анимации одного прогона при разной степени следования (план работ, «Как проверить»:
+# «запусти один прогон при c = 0,3 и при c = 1,0 и сравни анимации»; решение студента —
+# seed с явкой 35–40 тыс., стратегии LeastLoaded и схема, рассчитанная на c = 1).
+# experiments/stage4_animation.py → experiments/results/stage4/animation.npz;
+# рисунок stage4/animation_compliance (.mp4 и .gif).
+experiment: configs/experiment_stage4.yaml   # сценарий, схемы (plan.json), рычаги
+# Seed 13 — наибольшая явка среди оценочных seed 0–49 в диапазоне 35–40 тыс.
+# (N = 38 961; seed 3 — 40 226, вне диапазона). Параметры эпизода — как в оценке;
+# случайность внутри эпизода — Generator([13]), одинаковая для всех четырёх прогонов.
+seed: 13
+compliance: [0.3, 1.0]
+strategies: [fixed_c1, least_loaded]
+seats_pct: 20

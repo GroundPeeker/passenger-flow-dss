@@ -1,0 +1,133 @@
+{
+  "config": {
+    "experiment": "configs/experiment_stage4.yaml",
+    "seed": 13,
+    "compliance": [
+      0.3,
+      1.0
+    ],
+    "strategies": [
+      "fixed_c1",
+      "least_loaded"
+    ],
+    "seats_pct": 20
+  },
+  "runs": [
+    {
+      "strategy": "fixed_c1",
+      "c": 0.3,
+      "key": "fixed_c1|0.3",
+      "total_ped": 38961.0,
+      "mean_time_min": 29.62012391460695,
+      "danger_exposure_ped_min": 31067.932677563476,
+      "clearance_time_min": 108.50192644556998,
+      "max_density": 5.399046634767843
+    },
+    {
+      "strategy": "fixed_c1",
+      "c": 1.0,
+      "key": "fixed_c1|1",
+      "total_ped": 38961.0,
+      "mean_time_min": 27.86033724268707,
+      "danger_exposure_ped_min": 5661.209864084531,
+      "clearance_time_min": 102.21233916816036,
+      "max_density": 5.399046634767842
+    },
+    {
+      "strategy": "least_loaded",
+      "c": 0.3,
+      "key": "least_loaded|0.3",
+      "total_ped": 38961.0,
+      "mean_time_min": 25.80046534872247,
+      "danger_exposure_ped_min": 2965.118622167773,
+      "clearance_time_min": 84.85635023270265,
+      "max_density": 5.399153304798355
+    },
+    {
+      "strategy": "least_loaded",
+      "c": 1.0,
+      "key": "least_loaded|1",
+      "total_ped": 38961.0,
+      "mean_time_min": 26.109798271905994,
+      "danger_exposure_ped_min": 79030.94239434159,
+      "clearance_time_min": 94.05669387697642,
+      "max_density": 5.399153304798355
+    }
+  ],
+  "plan": {
+    "switch|15|1": {
+      "lever": "switch",
+      "seats_pct": 15,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 4200.157911593261,
+      "mean_time_min": 25.486846143694848
+    },
+    "switch|15|0.5": {
+      "lever": "switch",
+      "seats_pct": 15,
+      "design_c": 0.5,
+      "fraction": 0.175,
+      "danger_exposure_ped_min": 4398.648048253982,
+      "mean_time_min": 25.713338061800705
+    },
+    "switch|20|1": {
+      "lever": "switch",
+      "seats_pct": 20,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 2603.6520187063934,
+      "mean_time_min": 20.510919020064307
+    },
+    "switch|20|0.5": {
+      "lever": "switch",
+      "seats_pct": 20,
+      "design_c": 0.5,
+      "fraction": 0.15,
+      "danger_exposure_ped_min": 2623.988008645111,
+      "mean_time_min": 20.833964250201355
+    },
+    "switch|25|1": {
+      "lever": "switch",
+      "seats_pct": 25,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 2603.6520187063934,
+      "mean_time_min": 17.632855086453667
+    },
+    "switch|25|0.5": {
+      "lever": "switch",
+      "seats_pct": 25,
+      "design_c": 0.5,
+      "fraction": 0.15,
+      "danger_exposure_ped_min": 2617.0204641591417,
+      "mean_time_min": 17.880528268070414
+    },
+    "switch|30|1": {
+      "lever": "switch",
+      "seats_pct": 30,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 2603.3698526573753,
+      "mean_time_min": 15.799811901148018
+    },
+    "switch|30|0.5": {
+      "lever": "switch",
+      "seats_pct": 30,
+      "design_c": 0.5,
+      "fraction": 0.15,
+      "danger_exposure_ped_min": 2617.031182566964,
+      "mean_time_min": 16.01224080399246
+    },
+    "route|20|1": {
+      "lever": "route",
+      "seats_pct": 20,
+      "design_c": 1.0,
+      "fraction": 0.1,
+      "danger_exposure_ped_min": 3390.1350590624766,
+      "mean_time_min": 21.96321541185402
+    }
+  },
+  "git": "04e2ca7",
+  "created": "2026-10-13T21:34:33"
+}

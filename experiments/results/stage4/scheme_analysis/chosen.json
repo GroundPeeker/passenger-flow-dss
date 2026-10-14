@@ -1,0 +1,95 @@
+{
+  "calib_50|0.5": {
+    "fraction": 0.25,
+    "argmin_exposure": 0.225,
+    "argmin_mean_time": 0.475,
+    "within_tolerance": [
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25
+    ]
+  },
+  "calib_50|1": {
+    "fraction": 0.15,
+    "argmin_exposure": 0.125,
+    "argmin_mean_time": 0.25,
+    "within_tolerance": [
+      0.075,
+      0.1,
+      0.125,
+      0.15
+    ]
+  },
+  "model_10|0.5": {
+    "fraction": 0.15,
+    "argmin_exposure": 0.125,
+    "argmin_mean_time": 0.525,
+    "within_tolerance": [
+      0.1,
+      0.125,
+      0.15
+    ]
+  },
+  "model_10|1": {
+    "fraction": 0.1,
+    "argmin_exposure": 0.075,
+    "argmin_mean_time": 0.25,
+    "within_tolerance": [
+      0.075,
+      0.1
+    ]
+  },
+  "model_50|0.5": {
+    "fraction": 0.3,
+    "argmin_exposure": 0.225,
+    "argmin_mean_time": 0.475,
+    "within_tolerance": [
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3
+    ]
+  },
+  "model_50|1": {
+    "fraction": 0.15,
+    "argmin_exposure": 0.125,
+    "argmin_mean_time": 0.25,
+    "within_tolerance": [
+      0.075,
+      0.1,
+      0.125,
+      0.15
+    ]
+  },
+  "truth_50|0.5": {
+    "fraction": 0.275,
+    "argmin_exposure": 0.25,
+    "argmin_mean_time": 0.6,
+    "within_tolerance": [
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275
+    ]
+  },
+  "truth_50|1": {
+    "fraction": 0.15,
+    "argmin_exposure": 0.125,
+    "argmin_mean_time": 0.25,
+    "within_tolerance": [
+      0.1,
+      0.125,
+      0.15
+    ]
+  }
+}
